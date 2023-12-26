@@ -7,14 +7,12 @@ library(tidyverse)
 library(plotly)
 
 # Read shapefile
-# geo_coplas <- st_read("data/geoinfo/rodales_stats.shp", quiet = TRUE)
 geo_coplas <- read_rds("data/geoinfo/geo_coplas.rds")
 geo_coplas <- st_transform(geo_coplas, crs = 4326)
 
 # Read data 
 coplas <- read_csv("data/coplas2019.csv")
 
-# Karim 
 karim <- read_csv("data/parcelas_parasit_utm.csv") |>  na.omit() 
 geo_karim <- st_as_sf(karim, coords = c("UTM_x", "UTM_y"), crs = 4326)
 
@@ -24,10 +22,6 @@ icons <- awesomeIcons(
   library = "fa", 
   markerColor = ifelse(geo_karim$TYPE == "LOW", "orange", "green")
 )
-
-# icon = 'ios-close',
-# iconColor = 'black',
-# library = 'ion',
 
 popup_rodales <- paste0(
 "<strong>Código:</strong> ", geo_coplas$Codigo,
@@ -90,7 +84,6 @@ ui <- bootstrapPage(
   plotlyOutput("myplot", width = "80%", height = "30%")
   )
 
-# Define server
 server <- function(input, output, session) {
   
   shp_selected <- reactive({
@@ -140,7 +133,6 @@ server <- function(input, output, session) {
       addHomeButton(ext = st_bbox(geo_coplas), "PARCELAS Coplas")
   })
   
-  
 
 
   # click on polygon or select from dropdown
@@ -152,11 +144,6 @@ server <- function(input, output, session) {
       event$id
     }
   
-    # isolate({    
-    #   updateSelectizeInput(session, "parcela", choices = unique(geo_coplas$Codigo),
-    #                                    selected = code_selected, server = TRUE)
-    #   })
-    
     filtered_data <- coplas |>
       filter(code == code_selected) |>
       select(code, `1993`:`2019`) |>
