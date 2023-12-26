@@ -1,12 +1,14 @@
 library(shiny)
 library(leaflet)
 library(leaflet.extras2)
+library(leafem)
 library(sf)
 library(tidyverse)
 library(plotly)
 
 # Read shapefile
-geo_coplas <- st_read("data/geoinfo/rodales_stats.shp", quiet = TRUE)
+# geo_coplas <- st_read("data/geoinfo/rodales_stats.shp", quiet = TRUE)
+geo_coplas <- read_rds("data/geoinfo/geo_coplas.rds")
 geo_coplas <- st_transform(geo_coplas, crs = 4326)
 
 # Read data 
@@ -134,7 +136,8 @@ server <- function(input, output, session) {
         baseGroups = c("World Imagery (ESRI)", "Basemap", "Topographical","PNOA Máxima Actualidad"),
         overlayGroups = c("Karim", "Parcelas COPLAS"), 
         options = layersControlOptions(collapsed = TRUE) 
-      )
+      ) |> 
+      addHomeButton(ext = st_bbox(geo_coplas), "PARCELAS Coplas")
   })
   
   
