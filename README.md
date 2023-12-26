@@ -6,6 +6,18 @@ Los datos usados para desarrollar esta aplicación proceden de Ros-Candeira et a
 
 [^1]: Ros-Candeira, A., Pérez-Luque, A.J., Suárez-Muñoz, M., Bonet-García, F.J., Hódar, J.A., Giménez de Azcárate, F. & Ortega-Díaz, E. 2019. Dataset of occurrence and incidence of pine processionary moth in Andalusia, south Spain. ZooKeys, 852: 125–136. doi: [10.3897/zookeys.852.28567](https://doi.org/10.3897/zookeys.852.28567)
 
+## Despliegue
+En esta versión, existen dos opciones para ejecutar la app: 
+
+- [Online](http://vlab.iecolab.es/ajpelu/spatial_coplas_ppm). Tenemos desplegada la app en el siguiente enlace http://vlab.iecolab.es/ajpelu/spatial_coplas_ppm
+
+- Local: 
+    
+    - Descarga el repositorio. 
+    - Abre el proyecto con Rstudio
+    - Ejecuta el archivo `app.R` 
+
+
 ## Funcionamiento
 
 1. Selecciona el código de la parcela en el selector. También puedes navegar por el mapa y seleccionar la parcela espacialmente. 
@@ -17,4 +29,7 @@ Los datos usados para desarrollar esta aplicación proceden de Ros-Candeira et a
 
 ### Como citar: 
 Pérez-Luque, AJ (2023). Visualización de la evolución de la procesionaria en los pinares de Andalucía. Versión 0.1. https://github.com/ajpelu/spatial_coplas_ppm. doi: 10.5281/zenodo.8402099
+
+
+
 
