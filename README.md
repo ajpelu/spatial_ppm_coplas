@@ -1,5 +1,8 @@
 # Visualización de la evolución de la procesionaria en los pinares de Andalucía
 
+[![DOI](https://zenodo.org/badge/734796915.svg)](https://zenodo.org/doi/10.5281/zenodo.10433224)
+
+
 Este repositorio contiene una shiny app en el que se muestra un mapa interactivo con la distribución de las parcelas de seguimiento del grado de infestación de la procesionaria del pino en los pinares de Andalucía. Para cada una de las parcelas se muestra además un gráfico dinámico con la evolución del grado de infestación de cada parcela desde 1993. 
 
 Los datos usados para desarrollar esta aplicación proceden de Ros-Candeira et al. (2019)[^1]. 
@@ -17,7 +20,6 @@ En esta versión, existen dos opciones para ejecutar la app:
     - Abre el proyecto con Rstudio
     - Ejecuta el archivo `app.R` 
 
-
 ## Funcionamiento
 
 1. Selecciona el código de la parcela en el selector. También puedes navegar por el mapa y seleccionar la parcela espacialmente. 
@@ -28,7 +30,7 @@ En esta versión, existen dos opciones para ejecutar la app:
 - [**Antonio J. Pérez-Luque**](https://github.com/ajpelu) <a href="https://orcid.org/0000-0002-1747-0469" target="orcid.widget"> <img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID logo" width="16" height="16"/></a> 
 
 ### Como citar: 
-Pérez-Luque, AJ (2023). Visualización de la evolución de la procesionaria en los pinares de Andalucía. Versión 0.1. https://github.com/ajpelu/spatial_coplas_ppm. doi: 10.5281/zenodo.8402099
+Pérez-Luque, AJ (2023). Visualización de la evolución de la procesionaria en los pinares de Andalucía. Versión 0.1. https://github.com/ajpelu/spatial_coplas_ppm. doi: [10.5281/zenodo.10433224](https://zenodo.org/doi/10.5281/zenodo.10433224)
 
 
 
