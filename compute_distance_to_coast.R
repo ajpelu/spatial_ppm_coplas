@@ -7,7 +7,7 @@ library(rnaturalearth)
 # Read data 
 coplas <- read_csv("data/coplas2019.csv")
 
-karim <- read_csv("data/parcelas_parasit_utm.csv") |>  na.omit() 
+karim <- read_csv("data/parcelas_parasit_utm.csv") 
 geo_karim <- st_as_sf(karim, coords = c("UTM_x", "UTM_y"), crs = 4326)
 
 geo_karimed50 <- st_transform(geo_karim, 23030)
